@@ -1,0 +1,20 @@
+# Cache
+/.phpunit.cache
+.phpactor.json
+.phpunit.result.cache
+
+# Dependencies
+/vendor
+/node_modules
+.pnpm-store
+composer.lock
+
+# Editor directories and files
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+
+# Logs
+*.log
