@@ -1,0 +1,14 @@
+{
+    "name": "hosteeka-laravel-lang",
+    "private": "true",
+    "exports": {
+        ".": "./packages/langjs/dist"
+    },
+    "scripts": {
+        "format": "prettier --write ./packages",
+        "format:check": "prettier --check ./packages"
+    },
+    "devDependencies": {
+        "prettier": "^3.5.3"
+    }
+}
