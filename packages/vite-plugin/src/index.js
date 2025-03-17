@@ -26,7 +26,7 @@ export default (config) => {
         name: "vite-plugin-laravel-lang",
         buildStart: async () => {
             exec(`ps -o args= -p ${process.pid}`, (error, stdout, stderr) => {
-                if (stdout.trim().startsWith("sail")) {
+                if (error === null && stderr !== "" && stdout.trim().startsWith("sail")) {
                     // Replace php with sail in cmd
                     cmd[0] = "sail";
                 }
