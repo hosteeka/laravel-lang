@@ -1,0 +1,19 @@
+{
+    "name": "vite-plugin-laravel-lang",
+    "version": "0.0.0",
+    "description": "Vite plugin for laravel-lang",
+    "keywords": [
+        "vite",
+        "vite-plugin",
+        "laravel-lang"
+    ],
+    "homepage": "https://github.com/hosteeka/laravel-lang/packages/vite-plugin",
+    "bugs": "https://github.com/hosteeka/laravel-lang/issues",
+    "license": "MIT",
+    "author": "Melvin Otieno <o.melvinotieno@gmail.com> (https://melvinotieno.com)",
+    "files": [
+        "src"
+    ],
+    "type": "module",
+    "exports": "./src/index.js"
+}
