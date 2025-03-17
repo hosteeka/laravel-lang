@@ -1,0 +1,59 @@
+{
+    "name": "hosteeka/laravel-lang",
+    "version": "1.0.0",
+    "description": "Use your Laravel translations in JavaScript.",
+    "keywords": [
+        "laravel",
+        "localization",
+        "language",
+        "translation",
+        "javascript"
+    ],
+    "homepage": "https://github.com/hosteeka/laravel-lang",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Melvin Otieno",
+            "email": "o.melvinotieno@gmail.com",
+            "homepage": "https://melvinotieno.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-json": "*",
+        "laravel/framework": ">=9.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.21",
+        "orchestra/testbench": "^10.1",
+        "pestphp/pest": "^3.7",
+        "pestphp/pest-plugin-laravel": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hosteeka\\Lang\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hosteeka\\Lang\\LangServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
