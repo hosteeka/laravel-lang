@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'getting_started' => 'Empecemos',
+    'getting_started' => 'Empecemos :name',
 ];
