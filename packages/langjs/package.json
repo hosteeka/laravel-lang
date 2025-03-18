@@ -26,8 +26,8 @@
     "module": "./dist/index.esm.js",
     "types": "./types/index.d.ts",
     "scripts": {
-        "dev": "microbundle watch -i ./src/index.js -o ./dist/index.js --format modern,esm --no-sourcemap",
-        "build": "microbundle -i ./src/index.js -o ./dist/index.js --format modern,esm --no-sourcemap"
+        "dev": "microbundle watch -i ./src/index.js -o ./dist/index.js --format modern,esm --no-sourcemap --no-generateTypes",
+        "build": "microbundle -i ./src/index.js -o ./dist/index.js --format modern,esm --no-sourcemap --no-generateTypes"
     },
     "devDependencies": {
         "microbundle": "^0.15.1"
