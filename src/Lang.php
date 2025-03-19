@@ -52,14 +52,17 @@ class Lang implements JsonSerializable
     }
 
     /**
-     * Get a list of supported locales with their names.
+     * Get a list of supported locales with their names and direction.
      */
     public static function supportedLocales(): array
     {
         $locales = [];
 
         foreach (static::resolveLocales() as $locale) {
-            $locales[$locale] = LocaleName::getName($locale);
+            $locales[$locale] = [
+                'name' => LocaleDetails::getName($locale),
+                'direction' => LocaleDetails::getDirection($locale),
+            ];
         }
 
         return $locales;
