@@ -5,11 +5,7 @@
  * @returns {string[]}
  */
 export function buildCommand(config) {
-    const cmd = [
-        process.env.LARAVEL_SAIL ? "sail" : "php",
-        "artisan",
-        "lang:generate",
-    ];
+    const cmd = ["php", "artisan", "lang:generate"];
 
     if (config && config.path) {
         cmd.push(config.path);
