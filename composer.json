@@ -1,6 +1,6 @@
 {
     "name": "hosteeka/laravel-lang",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Use your Laravel translations in JavaScript.",
     "keywords": [
         "laravel",
@@ -54,6 +54,6 @@
             "pestphp/pest-plugin": true
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
