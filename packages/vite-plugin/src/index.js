@@ -1,11 +1,22 @@
 import path from "node:path";
 import { exec } from "node:child_process";
 
+/**
+ * Vite plugin to run `php artisan lang:generate` command
+ *
+ * @param {{path: string, sail: boolean}} config
+ */
 export default (config) => {
     const cmd = ["php", "artisan", "lang:generate"];
 
-    if (config && config.path) {
-        cmd.push(config.path);
+    if (config) {
+        if (config.sail) {
+            cmd[0] = "sail";
+        }
+
+        if (config.path) {
+            cmd.push(config.path);
+        }
     }
 
     const runCommand = () => {
@@ -27,17 +38,7 @@ export default (config) => {
     return {
         name: "vite-plugin-laravel-lang",
         buildStart: async () => {
-            exec(`ps -o args= -p ${process.pid}`, (error, stdout, stderr) => {
-                if (
-                    error === null &&
-                    stderr !== "" &&
-                    stdout.trim().startsWith("sail")
-                ) {
-                    // Replace php with sail in cmd
-                    cmd[0] = "sail";
-                }
-                runCommand();
-            });
+            runCommand();
         },
         handleHotUpdate({ file }) {
             const langPath = path.join(process.cwd(), "lang");
