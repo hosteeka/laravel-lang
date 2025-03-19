@@ -1,23 +1,14 @@
-import path from "node:path";
 import { exec } from "node:child_process";
+import path from "node:path";
+import { buildCommand } from "./utilities.js";
 
 /**
- * Vite plugin to run `php artisan lang:generate` command
+ * Vite plugin to run the lang generator.
  *
- * @param {{path: string, sail: boolean}} config
+ * @param {{ path: string }|null} config
  */
 export default (config) => {
-    const cmd = ["php", "artisan", "lang:generate"];
-
-    if (config) {
-        if (config.sail) {
-            cmd[0] = "sail";
-        }
-
-        if (config.path) {
-            cmd.push(config.path);
-        }
-    }
+    const cmd = buildCommand(config);
 
     const runCommand = () => {
         exec(cmd.join(" "), (error, stdout, stderr) => {
