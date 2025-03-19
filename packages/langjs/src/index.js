@@ -27,7 +27,7 @@ export function getFallbackLocale(config) {
  * Get the supported locales and their names from `LangConfig`.
  *
  * @param {LangConfig|null} config The configuration to use.
- * @returns {Record<string, string>} The supported locales and their names.
+ * @returns {SupportedLocales} The supported locales and their names.
  */
 export function getSupportedLocales(config) {
     return new Translator(config).getSupportedLocales();

@@ -32,7 +32,7 @@ export default class Translator {
     /**
      * Get the supported locales.
      *
-     * @returns {Record<string, string>}
+     * @returns {SupportedLocales}
      */
     getSupportedLocales() {
         return this._config["supportedLocales"];
