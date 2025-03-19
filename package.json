@@ -1,8 +1,12 @@
 {
-    "name": "hosteeka-laravel-lang",
     "private": "true",
+    "workspaces": [
+        "packages/*"
+    ],
+    "type": "module",
     "exports": {
-        ".": "./packages/langjs/dist"
+        ".": "./packages/langjs/dist",
+        "./vite-plugin": "./packages/vite-plugin/src/index.js"
     },
     "scripts": {
         "format": "prettier --write ./packages",

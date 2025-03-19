@@ -1,9 +1,9 @@
 import tailwindcss from '@tailwindcss/vite';
-import vue from "@vitejs/plugin-vue";
+import vue from '@vitejs/plugin-vue';
 import laravel from 'laravel-vite-plugin';
-import path from "path";
+import path from 'path';
 import { defineConfig } from 'vite';
-import laravelLang from 'vite-plugin-laravel-lang';
+import laravelLang from './vendor/hosteeka/laravel-lang/packages/vite-plugin';
 
 export default defineConfig({
     plugins: [
