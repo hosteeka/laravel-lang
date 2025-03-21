@@ -1,18 +1,42 @@
 {
-    "private": "true",
-    "workspaces": [
-        "packages/*"
+    "name": "laravel-lang",
+    "version": "0.1.1",
+    "description": "Use your Laravel translations in JavaScript.",
+    "keywords": [
+        "laravel",
+        "localization",
+        "language",
+        "translation",
+        "javascript"
+    ],
+    "homepage": "https://github.com/hosteeka/laravel-lang",
+    "bugs": "https://github.com/hosteeka/laravel-lang/issues",
+    "license": "MIT",
+    "author": "Melvin Otieno <o.melvinotieno@gmail.com> (https://melvinotieno.com)",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hosteeka/laravel-lang.git"
+    },
+    "files": [
+        "dist"
     ],
     "type": "module",
+    "main": "./dist/index.js",
     "exports": {
-        ".": "./packages/langjs/dist",
-        "./vite-plugin": "./packages/vite-plugin/src/index.js"
+        "default": "./dist/index.js"
     },
     "scripts": {
-        "format": "prettier --write ./packages",
-        "format:check": "prettier --check ./packages"
+        "build": "esbuild javascript/src/index.ts --bundle --minify --outdir=dist --format=esm",
+        "test": "vitest run",
+        "test:watch": "vitest watch",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
     },
     "devDependencies": {
-        "prettier": "^3.5.3"
+        "esbuild": "^0.25.1",
+        "jsdom": "^26.0.0",
+        "prettier": "^3.5.3",
+        "typescript": "^5.8.2",
+        "vitest": "^3.0.9"
     }
 }
