@@ -16,10 +16,10 @@
         "outDir": "dist",
         "rootDir": "javascript/src",
         "sourceMap": true,
-        "declaration": true,
+        "declaration": true
     },
     "include": [
         "javascript/**/*.ts",
-        "javascript/**/*.d.ts",
+        "javascript/**/*.d.ts"
     ]
 }
