@@ -3,9 +3,6 @@
 .phpactor.json
 .phpunit.result.cache
 
-# Build
-**/dist
-
 # Dependencies
 vendor
 node_modules
